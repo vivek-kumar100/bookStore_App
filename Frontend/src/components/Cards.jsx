@@ -1,7 +1,6 @@
 import React from 'react'
 
-function Crads({item}) {
- 
+function Cards() {
     return (
         <>
           <div className="mt-4 my-3 p-3">
@@ -28,4 +27,4 @@ function Crads({item}) {
       );
     }
     
-export default Crads
+export default Cards
