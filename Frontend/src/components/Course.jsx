@@ -1,5 +1,10 @@
 import React from 'react'
-import list from '../../public/list.json'
+import Cards from "./Cards"
+import list from '../../public/list.json';
+import {Link} from 'react-router-dom';
+ 
+
+
 function Course() {
   return (
     <> 
@@ -18,17 +23,23 @@ function Course() {
             animi eos aut. Nobis quisquam reiciendis sunt quis sed magnam
             consequatur!
           </p>
-        
+          <Link to="/"> 
             <button className="mt-6 bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300">
               Back
             </button>
-         
+            </Link>
         </div>
-      
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-4">
+            {
+              list.map((item)=>(
+                <Cards key= {item.id} item={item}/>
+              ))
+            }
+        </div>
         </div>
     </>
    
   )
 }
 
-export default Course
+export default Course;
