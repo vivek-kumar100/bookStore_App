@@ -6,7 +6,7 @@ function Login() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }, 
   } = useForm();
 
   const onSubmit =(data) => console.log(data);
@@ -50,8 +50,9 @@ function Login() {
                 type="password"
                 placeholder="Enter your password"
                 className="w-80 px-3 py-1 border rounded-md outline-none"
-              
+                {...register("password", { required: true })}
               />
+              
               <br />
               {errors.password && (
                 <span className="text-sm text-red-500">
@@ -70,6 +71,7 @@ function Login() {
                 <Link
                   to="/signup"
                   className="underline text-blue-500 cursor-pointer"
+                
                 >
                   Signup
                 </Link>{" "}
