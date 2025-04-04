@@ -13,8 +13,8 @@ function Contact() {
         const onSubmit =(data) => console.log(data);
   return (
     <>
-    <div className='flex h-screen items-center justify-center'>
-    <div  className="border-[2px] shadow-md p-5 rounded-md w-[450px]">
+    <div className='flex h-screen items-center justify-center dark:bg-slate-800 dark:text-white'>
+    <div  className="border-[2px] shadow-md p-5 rounded-md w-[450px] dark:bg-slate-800 dark:text-white">
         <div className="">
           <form onSubmit={handleSubmit(onSubmit)}  method="dialog">
             {/* if there is a button in form, it will close the modal */}
